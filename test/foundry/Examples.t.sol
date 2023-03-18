@@ -3,7 +3,7 @@ pragma solidity 0.8.13;
 
 import "forge-std/Test.sol";
 
-import "../../src/Example.sol";
+import "../../src/contracts/Example.sol";
 
 contract TestExample is Test {
     Example public ex;

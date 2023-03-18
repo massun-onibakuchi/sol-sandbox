@@ -14,6 +14,10 @@ hh-cache/
 cache
 out
 
+
+## Rust
+target/
+
 .DS_Store
 
 # VScode

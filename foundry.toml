@@ -13,6 +13,9 @@ remappings = [
 ]
 optimizer_runs = 15000
 
+[profile.optimized]
+via_ir = true
+
 [fuzz]
 runs = 1000
 
