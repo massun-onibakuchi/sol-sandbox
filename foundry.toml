@@ -7,11 +7,11 @@ out = 'out'
 libs = ['lib', 'node_modules']
 test = 'test/foundry'
 remappings = [
-    'ds-test=lib/ds-test/src/',
     'forge-std=lib/forge-std/src/',
     "@openzeppelin/=lib/openzeppelin-contracts/",
 ]
 optimizer_runs = 15000
+ffi = true
 
 [profile.optimized]
 via_ir = true

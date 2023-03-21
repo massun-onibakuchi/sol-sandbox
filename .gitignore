@@ -5,6 +5,8 @@ coverage.json
 typechain-types
 yarn-error.log
 
+.venv/
+
 #Hardhat files
 artifacts/
 hh-cache/
