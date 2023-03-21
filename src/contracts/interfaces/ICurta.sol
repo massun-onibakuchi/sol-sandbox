@@ -5,5 +5,5 @@ interface ICurta {
     /// @notice Mints an NFT if the provided solution solves the puzzle.
     /// @param _puzzleId The ID of the puzzle.
     /// @param _solution The solution.
-    function solve(uint32 _puzzleId, uint256 _solution) external;
+    function solve(uint32 _puzzleId, uint256 _solution) external payable;
 }

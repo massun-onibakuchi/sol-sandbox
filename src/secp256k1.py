@@ -210,10 +210,12 @@ def verify_signature(public_key, message, signature):
 
 print('Curve:', curve.name)
 
+# key generation
 private, public = make_keypair()
 print("Private key:", hex(private))
 print("Public key: (0x{:x}, 0x{:x})".format(*public))
 
+# signature generation and verification
 msg = b'Hello!'
 signature = sign_message(private, msg)
 
@@ -234,3 +236,23 @@ print()
 print('Message:', msg)
 print("Public key: (0x{:x}, 0x{:x})".format(*public))
 print('Verification:', verify_signature(public, msg, signature))
+
+# speciall form of G
+
+# n is very large order
+print("curve.n :>>", hex(curve.n))
+print("(curve.n - 1) // 2 :>>", hex((curve.n - 1) // 2))
+
+# in some cases, the x-corrdinate of the k * G is very small
+# k = (n - 1) / 2 or k = (n + 1) / 2, x-coordinate is smaller than 2^184
+# https://twitter.com/avihu28/status/1247755498192916480
+# https://crypto.stackexchange.com/questions/60420/what-does-the-special-form-of-the-base-point-of-secp256k1-allow
+print("hex(2 << 184) :>>", hex(2 << 184))
+
+print("scalar_mult((curve.n - 1) // 2,curve.G) :>>",
+      hex(scalar_mult((curve.n - 1) // 2, curve.g)[0]))
+print("scalar_mult((curve.n + 1) // 2,curve.G) :>>",
+      hex(scalar_mult((curve.n + 1) // 2, curve.g)[0]))
+
+# CTF: curta.wtf/puzzle/3 https://twitter.com/rileyholterhus/status/1637905710095933441?s=20
+# hint https://twitter.com/0xkarmacoma/status/1637516925617192960?s=20
