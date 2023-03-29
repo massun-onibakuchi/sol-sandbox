@@ -19,6 +19,9 @@ via_ir = true
 [fuzz]
 runs = 1000
 
+[profile.deep_fuzz]
+runs = 10_000
+
 [rpc_endpoints]
 # This section lives outside of profiles and defines a table of RPC endpoints, where the key specifies the RPC endpoints's name and the value is the RPC endpoint itself.
 # The value can either be a valid RPC endpoint or a reference to an environment variable (wrapped with in ${}).
