@@ -2,7 +2,7 @@
 pragma solidity 0.8.13;
 
 import "forge-std/Test.sol";
-import "../../src/contracts/Strings.sol";
+import "../../src/contracts/utils/Strings.sol";
 
 contract StringsHarness {
     function toBinaryString(uint256 num) public pure returns (string memory) {
