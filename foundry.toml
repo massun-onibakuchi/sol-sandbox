@@ -28,4 +28,7 @@ runs = 10_000
 # These RPC endpoints can be used in tests and Solidity scripts 
 mainnet = "${RPC_URL}"
 
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+
 # See more config options https://github.com/gakonst/foundry/tree/master/config

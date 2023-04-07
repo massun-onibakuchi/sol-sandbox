@@ -7,6 +7,12 @@ import '@nomicfoundation/hardhat-foundry'
 
 dotenv.config()
 
+const FORKING = process.env.FORKING?.toLowerCase() === 'true'
+const RPC_URL = process.env.RPC_URL ?? ''
+const FORK_BLOCK_NUMBER = process.env.FORK_BLOCK_NUMBER ? parseInt(process.env.FORK_BLOCK_NUMBER) : undefined
+
+if (!RPC_URL?.startsWith('http') && FORKING) throw 'env RPC_URL is undefined'
+
 const config: HardhatUserConfig = {
   solidity: {
     compilers: [
@@ -24,7 +30,11 @@ const config: HardhatUserConfig = {
   },
   networks: {
     hardhat: {
-      blockGasLimit: 30_000_000,
+      forking: {
+        url: RPC_URL,
+        blockNumber: FORK_BLOCK_NUMBER,
+        enabled: FORKING,
+      },
     },
   },
   // Avoid foundry cache conflict.

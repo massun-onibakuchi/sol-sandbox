@@ -38,6 +38,7 @@
     "chai": "^4.3.7",
     "dotenv": "^16.0.0",
     "ethers": "^5.7.2",
+    "evm-run": "https://github.com/zemse/evm-run.git",
     "hardhat": "^2.9.3",
     "hardhat-gas-reporter": "^1.0.9",
     "husky": ">=6",
