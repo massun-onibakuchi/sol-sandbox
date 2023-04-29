@@ -13,6 +13,7 @@ library MemoryDumpLib {
         dump(0x00);
     }
 
+    /// @dev This function itself changes the memory.
     function dump(uint256 offset) internal view {
         MemoryPointer freeMemPtr = getFreeMemoryPointer();
         string memory message;

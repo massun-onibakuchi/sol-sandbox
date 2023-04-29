@@ -1,7 +1,7 @@
 {
-  "name": "hardhat-foundry",
+  "name": "sol-sandbox",
   "version": "0.0.1",
-  "description": "Forkable Hardhat & Foundry template",
+  "description": "Sandbox for Smart Contract",
   "scripts": {
     "build": "hardhat compile",
     "test": "hardhat test",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/massun-onibakuchi/hardhat-foundry-template/"
+    "url": "git+https://github.com/massun-onibakuchi/sol-sandbox/"
   },
   "keywords": [
     "hardhat",
@@ -23,7 +23,7 @@
   ],
   "author": "0xbakuchi",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/massun-onibakuchi/hardhat-foundry-template/#readme",
+  "homepage": "https://github.com/massun-onibakuchi/sol-sandbox/#readme",
   "devDependencies": {
     "@ethersproject/abi": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
@@ -71,6 +71,9 @@
     "lodash": ">=4.17.21",
     "node-fetch": ">=2.6.7",
     "underscore": ">=1.12.1",
-    "yargs-parser": ">=5.0.1"
+    "yargs-parser": ">=5.0.1",
+    "yargs-unparser": ">=2.0.0",
+    "minimatch": ">=3.0.5",
+    "flat": ">=5.0.2"
   }
 }
